@@ -18,4 +18,20 @@ class IndexController extends AbstractActionController
     {
         return new ViewModel();
     }
+    
+    public function exemploAction(){
+        
+        // VARIAVEL
+        $nome = "Mauro Pedreira";
+        $anoAtual = 2016;
+        $anoNasc = 1985;
+        $idade;
+        
+        $idade = $anoAtual - $anoNasc;
+        
+        //return new ViewModel();
+        
+        // RETORNA  VARIAVEL NO ARRAY
+        return new ViewModel(array('nome1'=>$nome, 'idade'=>$idade));
+    }
 }

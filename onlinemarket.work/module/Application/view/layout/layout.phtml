@@ -44,8 +44,14 @@
             </div>
         </nav>
         <div class="container">
-            <?php echo $this->content; ?>
+            <div class="col-lg-2">
+                <?php echo $this->categories; ?>
+            </div>
+            <div class="col-lg-8">
+                <?php echo $this->content; ?>
+            </div>
             <hr>
+        </div>
             <footer>
                 <p>&copy; 2005 - <?php echo date('Y') ?> by Zend Technologies Ltd. <?php echo $this->translate('All rights reserved.') ?></p>
             </footer>
