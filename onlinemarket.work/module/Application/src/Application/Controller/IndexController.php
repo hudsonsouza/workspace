@@ -16,6 +16,10 @@ class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
+        // EU NAO PRECISO DAR 'NEW' PARA INSTANCIA, É SÓ UTILIZAR
+        $exemploService = $this->getServiceLocator()->get("ExemploService");
+        print_r($exemploService);die;
+        
         return new ViewModel();
     }
     

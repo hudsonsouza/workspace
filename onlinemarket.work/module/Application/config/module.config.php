@@ -18,8 +18,8 @@ return array(
                     'route'    => '/',
                     'defaults' => array(
                         'controller' => 'Application\Controller\Index',
-                        //'action'     => 'index',
-                        'action'     => 'exemplo',
+                        'action'     => 'index',
+                        //'action'     => 'exemplo',
                     ),
                 ),
             ),
@@ -56,6 +56,10 @@ return array(
         ),
     ),
     'service_manager' => array(
+        // REGISTRO DO SERVICO - DE PREFERENCIA AKI
+        'invokables' => array(
+            'ExemploService' => 'Application\Service\ExemploService',
+        ),
         'abstract_factories' => array(
             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
             'Zend\Log\LoggerAbstractServiceFactory',

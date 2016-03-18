@@ -28,14 +28,33 @@ class Module
         # • Context: current object
         # • Handler: onDispatch
         # • Priority: 100
+        
+        // REGISTRANDO EVENTO
+        // ESCUTAR UM EVENTO / listens:"dispatch" event
+        // SETAR O context: $this
+        // METODO QUE VAI SER EXECUTADO, QD O EVENTO FOR DIAPARADO 
+        // handler / callback / metodo: onDispatch()
+        // prioridade: 100 alta
+        
+        // $eventManager->attach('dispatch', arrray($this, 'onDispatch'), 100);
         $eventManager->attach(MvcEvent::EVENT_DISPATCH, array($this, 'onDispatch'), 100);
     }
 
     public function onDispatch(MvcEvent $e){
-        $vm = $e->getViewModel();
-        $vm->setVariable('categories', 'CATEGORY LIST');
+        $vm = $e->getViewModel();  // recebo / exibe na tela / vm = ViewModel
+        $vm->setVariable('categories', 'CATEGORY LIST');  // (nome_variavel , conteudo_variavel)
     }
 
+    
+//    // REGISTRO DO SERVICO    
+//    public function getServiceConfig()
+//    {
+//        return array(
+//            'invokables' => array(
+//                'ExemploService' => 'Application\Service\ExemploService'
+//            )
+//        );
+//    }
 
     public function getConfig()
     {
