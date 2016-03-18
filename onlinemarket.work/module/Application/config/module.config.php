@@ -56,10 +56,26 @@ return array(
         ),
     ),
     'service_manager' => array(
-        // REGISTRO DO SERVICO - DE PREFERENCIA AKI
-        'invokables' => array(
-            'ExemploService' => 'Application\Service\ExemploService',
+//        // REGISTRO DO SERVICO - DE PREFERENCIA AKI
+//        'invokables' => array(
+//            'ExemploService' => 'Application\Service\ExemploService',
+//        ),
+        
+        // M4Ex1 - Faze 1 - Registrar um Servico
+        'services' => array(  // CRIAR UM ARRAY DE 'TIPO DE SERVICES'
+            'categories' => array(  // NOME DO SERVICO
+                'bartes',  // CONTEUDO DO ARRAY 
+                'beauty',
+                'clothing',
+                'computer',
+                'entertainment',
+                'free',
+                'garden',
+                'general'
+            )
         ),
+        
+        
         'abstract_factories' => array(
             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
             'Zend\Log\LoggerAbstractServiceFactory',

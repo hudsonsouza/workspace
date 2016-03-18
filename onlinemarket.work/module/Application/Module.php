@@ -41,8 +41,14 @@ class Module
     }
 
     public function onDispatch(MvcEvent $e){
+        
+        // M4Ex1 - Fase 2 - Recuperando o servico "Categories"
+        $sm = $e->getApplication()->getServiceManager();
+        $categories = $sm->get("categories");
+        
         $vm = $e->getViewModel();  // recebo / exibe na tela / vm = ViewModel
-        $vm->setVariable('categories', 'CATEGORY LIST');  // (nome_variavel , conteudo_variavel)
+        //$vm->setVariable('categories', 'CATEGORY LIST');  // (nome_variavel , conteudo_variavel)
+        $vm->setVariable('categories', $categories);  // RECUPERA O CONTEUDO DO ARRAY 'categories'
     }
 
     

@@ -45,7 +45,24 @@
         </nav>
         <div class="container">
             <div class="col-lg-2">
+                <!-- 
+                M4Ex1 - Fase 3 - Fazer um Forech para ler o conteudo do array "categories"
                 <?php echo $this->categories; ?>
+                -->
+                
+                <!-- USANDO VIEW-HELPER HTMLIST  -->
+                <h4>Categories HTMLList:</h4>
+                <?php echo $this->htmllist($this->categories); ?>
+                
+                
+                <!-- USANDO FORECH PARA IMPRIMIR O CONTEUDO DO ARRAY "categories"  -->
+                <h4>Categories Forech:</h4>
+                <ul>
+                <?php foreach($this->categories as $category):  ?>
+                    <li> <?php echo $category ?> </li>  
+                <?php endforeach; ?>
+                </ul>
+                
             </div>
             <div class="col-lg-8">
                 <?php echo $this->content; ?>
