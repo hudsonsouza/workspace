@@ -10,10 +10,29 @@ return array(
                 'options' => array(
                     'route'    => '/market',  // CAMINHO DA URL
                     'defaults' => array(
-                        'controller' => 'Market\Controller\Index',
+                        //'controller' => 'Market\Controller\Index',
+                        'controller' => 'market-index-controller',
                         'action'     => 'index',
                     ),
                 ),
+                
+                // DEIXA A ROTA DINAMICA
+                'may_terminate' => true,
+                'child_routes' => array(
+                    'default' => array(
+                        'type'    => 'Segment',
+                        'options' => array(
+                            'route'    => '/[:controller[/:action]]',
+                            'constraints' => array(
+                                'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                                'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
+                            ),
+                            'defaults' => array(
+                            ),
+                        ),
+                    ),
+                ),
+  
             ),
         ),
     ),
@@ -23,7 +42,10 @@ return array(
     'controllers' => array(
         'invokables' => array(  // TIPO DO SERVICO
             // NOME DO SERVICO        /  CAMINHO DA CLASSE
-            'Market\Controller\Index' => 'Market\Controller\IndexController',  // SERVICO / URL DA CLASSE
+            //'Market\Controller\Index' => 'Market\Controller\IndexController',  // SERVICO / URL DA CLASSE
+            
+            // MUDAR O NOME DO REGISTRO DO CONTROLLER PARA SER ACESSADO PELA URL EXPECÍFICA
+            'market-index-controller' => 'Market\Controller\IndexController',  // SERVICO / URL DA CLASSE
         ),
     ),
     
