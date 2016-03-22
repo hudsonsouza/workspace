@@ -6,9 +6,10 @@
  * @see http://framework.zend.com/manual/current/en/tutorials/config.advanced.html#environment-specific-application-configuration
  */
 return array(
-    // This should be an array of module namespaces used in the application.
+    // NOME DO MODULO CRIADO
     'modules' => array(
         'Application',
+        'Market',
     ),
 
     // These are various options for the listeners attached to the ModuleManager
