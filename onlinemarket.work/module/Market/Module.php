@@ -15,9 +15,9 @@ class Module
     {
         return array(
             // 1- AUTOLOAD GERADO MANUALMENTE
-//            'Zend\Loader\ClassMapAutoloader' => array(
-//                __DIR__.'/autoload_classmap.php',
-//            ),
+            'Zend\Loader\ClassMapAutoloader' => array(
+                __DIR__.'/autoload_classmap.php',
+            ),
             
             
             // 2- SE NAO ENCONTRAR, ZF2 BUSCA NO STANDERD

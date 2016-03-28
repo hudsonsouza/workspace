@@ -46,7 +46,15 @@ return array(
             
             // MUDAR O NOME DO REGISTRO DO CONTROLLER PARA SER ACESSADO PELA URL EXPECÍFICA
             'market-index-controller' => 'Market\Controller\IndexController',  // SERVICO / URL DA CLASSE
+            // REGISTRO DA 'viewController' M6Ex1 - parte A
+            'market-view-controller' => 'Market\Controller\ViewController',
+            ),
+        
+        // REGISTRO DA 'viewController' M6Ex1 - parte B
+        'factories' => array(
+           'market-post-controller' => 'Market\Factory\PostControllerFactory',
         ),
+        
     ),
     
     
