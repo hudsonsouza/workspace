@@ -54,6 +54,10 @@ return array(
         'factories' => array(
            'market-post-controller' => 'Market\Factory\PostControllerFactory',
         ),
+        // M6Ex1  - PARTE D - CRIAR APELIDO PARA URL
+        'aliases' => array(
+           'alt' => 'market-view-controller', 
+        ),
         
     ),
     

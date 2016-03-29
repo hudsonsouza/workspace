@@ -7,6 +7,10 @@ class IndexController extends \Zend\Mvc\Controller\AbstractActionController {
     
     public function indexAction() 
     {
-        return new \Zend\View\Model\ViewModel();
+        $messages = array();
+        if($this->flashMessenger()->hasMessages()){
+            $messages = $this->flashMessenger()->getMessages();
+        }
+        return new \Zend\View\Model\ViewModel(array('messages'=>$messages));
     }
 }
