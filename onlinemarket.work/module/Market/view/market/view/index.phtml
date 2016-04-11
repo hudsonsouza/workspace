@@ -1,2 +1,8 @@
-<?php echo "<h1>".$this->category."</h1>"; ?>
+<?php 
+    // M8Ex1 - PARTE C - FALHA DE SEGURANÇA - VARIAVEL NAO TRATADA: ESCAPE
+    //echo "<h1>".$this->category."</h1>";   
+    
+    // VARIAVEL TRATADA COM - ESCAPE
+    echo "<h1>".$this->escapeHtml($this->category)."</h1>";   
+?>
 

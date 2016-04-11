@@ -47,22 +47,25 @@
             <div class="col-lg-2">
                 <!-- 
                 M4Ex1 - Fase 3 - Fazer um Forech para ler o conteudo do array "categories"
-                <?php echo $this->categories; ?>
+                <?php  // echo $this->categories; ?>
                 -->
                 
                 <!-- USANDO VIEW-HELPER HTMLIST  -->
                 <h4>Categories HTMLList:</h4>
-                <?php echo $this->htmllist($this->categories); ?>
+                <?php // echo $this->htmllist($this->categories); ?>
+                <!-- M8Ex1 - Parte D -->
+                <?php // echo $this->leftLinks($this->categories, $this->basepath().'/market/view/main'); ?>
+                <?php  echo $this->leftLinks($this->categories, $this->basepath().'/market/view/main'); ?>
                 
                 
-                <!-- USANDO FORECH PARA IMPRIMIR O CONTEUDO DO ARRAY "categories"  -->
+                <!-- USANDO FORECH PARA IMPRIMIR O CONTEUDO DO ARRAY "categories" --> 
                 <h4>Categories Forech:</h4>
                 <ul>
-                <?php foreach($this->categories as $category):  ?>
-                    <li> <?php echo $category ?> </li>  
-                <?php endforeach; ?>
+                <?php  foreach($this->categories as $category):  ?>
+                    <li> <?php  echo $category ?> </li>  
+                <?php  endforeach; ?>
                 </ul>
-                
+
             </div>
             <div class="col-lg-8">
                 <?php echo $this->content; ?>

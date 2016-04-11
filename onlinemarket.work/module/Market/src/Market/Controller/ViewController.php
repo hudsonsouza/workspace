@@ -11,7 +11,7 @@ class ViewController extends \Zend\Mvc\Controller\AbstractActionController
         // PARTE C
         //$category  = $this->params()->fromQuery("category");
         
-        //M7Ex1 - Parte D
+        //M7Ex1 - Parte D e E
         $category  = $this->params()->fromRoute("category");
         
         return new \Zend\View\Model\ViewModel(array('category'=>$category));  

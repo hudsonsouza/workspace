@@ -11,6 +11,13 @@ class IndexController extends \Zend\Mvc\Controller\AbstractActionController {
         if($this->flashMessenger()->hasMessages()){
             $messages = $this->flashMessenger()->getMessages();
         }
-        return new \Zend\View\Model\ViewModel(array('messages'=>$messages));
+        
+        // M8Ex1 - Parte A
+        return array('messages'=>$messages);
+        //return new \Zend\View\Model\ViewModel(array('messages'=>$messages));
+    }
+    
+    public function fooAction(){
+        return new ViewMofel();
     }
 }
