@@ -1,3 +1,15 @@
-<h1>Post Controller</h1>
+<h1>Post Controller Formulário</h1>
 
-<?php Zend\Debug\Debug::dump($this->categories); ?>
+<style>
+    label{
+        width: 250px;
+    }
+</style>
+
+<?php $this->postForm->prepare(); ?>  <!-- PREPARAR O FORM, PARA RESOLVER QLQ TIPO DEPENDENCIA -->
+<?php echo $this->form()->openTag($this->postForm); ?>    <!-- ECHO openTag()() -->
+<?php echo $this->formCollection($this->postForm); ?>    <!-- GERAR TODO FORMULARIO AUTOMATICAMENTE -->
+<?php echo $this->form()->closeTag(); ?>    <!-- FECHAR closeTag() - Tag de Formulario -->
+
+<!-- ZEND DEBUG -->
+<?php Zend\Debug\Debug::dump($this->data); ?>

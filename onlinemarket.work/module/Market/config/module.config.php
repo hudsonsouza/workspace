@@ -146,6 +146,13 @@ routes(
          
      ),
      
+     // REGISTRO DA 'viewController' M9Ex1 - parte A     
+     'service_manager' => array(
+         'factories' => array(
+             'market-post-form' => 'Market\Factory\PostFormFactory'
+         )
+     ),
+     
      
      // VIEW MANAGER
          'view_manager' => array(

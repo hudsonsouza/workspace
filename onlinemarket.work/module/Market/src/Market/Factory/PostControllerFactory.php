@@ -15,6 +15,10 @@ class PostControllerFactory implements \Zend\ServiceManager\FactoryInterface
         $postController = new \Market\Controller\PostController();  // INSTANCIA
         $postController->setCategories($categories);
         
+        // M9Ex1  - Parte A
+        // injetar postForm em nosso Controller
+        $postController->setPostForm($sm->get('market-post-form'));
+        
         return $postController;
     }
 }
