@@ -15,6 +15,9 @@ class PostFormFactory implements \Zend\ServiceManager\FactoryInterface
         $form->setCategories($categories);  // RECEBE AS CATEGORIES
         $form->buildForm();  // EXECUTAR O METODO PARA REGISTRAR  OS ELEMENTOS E CONSTRUIR O FORMULARIO
         
+        // PASSA O FILTRO QUE FOI CRIADO MANUALMENTE PARA DENTRO DO FORMULARIO
+        $form->setInputFilter($sm->get('market-post-filter'));
+        
         return $form;
     }
 }

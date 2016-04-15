@@ -149,7 +149,9 @@ routes(
      // REGISTRO DA 'viewController' M9Ex1 - parte A     
      'service_manager' => array(
          'factories' => array(
-             'market-post-form' => 'Market\Factory\PostFormFactory'
+             'market-post-form' => 'Market\Factory\PostFormFactory',
+             // M9Ex1 - parte C - REGISTRO
+             'market-post-filter' => 'Market\Factory\PostFilterFactory'
          )
      ),
      
